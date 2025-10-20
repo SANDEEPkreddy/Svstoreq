@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SV Store - Stationery & Xerox Services</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><i class="fas fa-store"></i> SV Store</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="nav-actions">
+                    <button class="search-btn" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="menu-btn" id="menu-btn">
+                        <i class="fas fa-bars"></i>
+                        Menu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to <span class="highlight">SV Store</span></h1>
+                <p>Your trusted stationery shop & xerox center for all your office and academic needs</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="openLoginModal()">
+                        <i class="fas fa-shopping-cart"></i> Order Now
+                    </button>
+                    <button class="btn-secondary" onclick="scrollToSection('services')">
+                        <i class="fas fa-info-circle"></i> Our Services
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Stationery</h3>
+                    <p>Quality office supplies</p>
+                </div>
+                <div class="hero-card">
+                    <i class="fas fa-print"></i>
+                    <h3>Xerox</h3>
+                    <p>Fast printing services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Quality stationery items for all your needs</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Pens</h3>
+                        <p>High-quality writing instruments</p>
+                        <div class="product-price">₹50 - ₹200</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Notebooks</h3>
+                        <p>Spiral and bound notebooks</p>
+                        <div class="product-price">₹30 - ₹150</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>File Folders</h3>
+                        <p>Organize your documents</p>
+                        <div class="product-price">₹20 - ₹80</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-paperclip"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Office Supplies</h3>
+                        <p>Staples, clips, and more</p>
+                        <div class="product-price">₹10 - ₹100</div>
+                        <button class="btn-add-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Professional stationery and xerox services</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Stationery Items</h3>
+                    <p>Pens, notebooks, papers, folders, and all office supplies</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-print"></i>
+                    <h3>Xerox & Printing</h3>
+                    <p>High-quality photocopying, printing, and document services</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Academic Supplies</h3>
+                    <p>Textbooks, notebooks, exam papers, and study materials</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Document Services</h3>
+                    <p>Lamination, binding, scanning, and document preparation</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Quick Service</h3>
+                    <p>Fast turnaround for urgent printing and stationery needs</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-rupee-sign"></i>
+                    <h3>Competitive Prices</h3>
+                    <p>Best rates for all stationery and printing services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-category">
+                    <h3><i class="fas fa-pencil-alt"></i> Stationery Items</h3>
+                    <ul>
+                        <li>Pens & Pencils</li>
+                        <li>Notebooks & Papers</li>
+                        <li>Folders & Files</li>
+                        <li>Office Supplies</li>
+                        <li>Art & Craft Materials</li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3><i class="fas fa-copy"></i> Xerox & Printing</h3>
+                    <ul>
+                        <li>Black & White Copies</li>
+                        <li>Color Printing</li>
+                        <li>Document Scanning</li>
+                        <li>Large Format Printing</li>
+                        <li>Photo Printing</li>
+                    </ul>
+                </div>
+                <div class="service-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Academic Services</h3>
+                    <ul>
+                        <li>Textbook Sales</li>
+                        <li>Exam Papers</li>
+                        <li>Assignment Printing</li>
+                        <li>Project Binding</li>
+                        <li>Study Materials</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login to SV Store</h2>
+            <form th:action="@{/login}" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="openRegisterModal()">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>Register for SV Store</h2>
+            <form th:action="@{/register}" method="post">
+                <div class="form-group">
+                    <label for="reg-name">Full Name:</label>
+                    <input type="text" id="reg-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password:</label>
+                    <input type="password" id="reg-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm-password">Confirm Password:</label>
+                    <input type="password" id="reg-confirm-password" name="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="openLoginModal()">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SV Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>
